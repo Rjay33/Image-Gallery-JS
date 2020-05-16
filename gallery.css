@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+h1, h2 {
+    font-family: 'Trebuchet MS', arial, sans-serif;
+    text-align: center;
+  }
+  #gallery {
+    width: 1240px;
+    margin: 0 auto;
+  }
+  .diplayed-Image {
+    position: relative;
+    display: block;
+    width: 1200px;
+    height: 800px;
+  }
+  .thumbBar {
+    margin: 0;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: opacity 1s;
+  }
+  .thumbBar img {
+    display: block;
+    width: 19%;
+    float: left;
+    cursor: pointer;
+  }
+  figcaption {
+    position: absolute;
+    bottom: -215px;
+    left: 117px;
+    width: 87%;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    background: black;
+    opacity: 0.7;
+  }
+  img {
+    padding: 0;
+    border: 6px solid green;
+  }
+  li img:not(:active) {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0, Chrome 18 */
+    filter: grayscale(100%);
+  }
+  li img :hover, :onclick {
+    -webkit-filter: none; /* Safari 6.0 - 9.0, Chrome 18*/
+    filter: none;
+    z-index: 10;
+    position: relative;
+  }    
+  li {
+    list-style-type: none;
+    display: inline;
+  }
+  @media screen and (max-width: 1200px){
+    .column {
+      width: 100%;
+    }
+  }
